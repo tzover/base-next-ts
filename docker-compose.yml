@@ -1,4 +1,4 @@
-version: "3.3"
+version: '3.3'
 services:
   frontend:
     image: ${IMAGE_BASENAME}/ui:${TAG}
@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./app:/home/node/app
-      - frontend-volume/:/home/node/app/node_modules
+      - frontend-volume:/home/node/app/node_modules
     ports:
       - ${FRONTEND_PORT}:3000
     tty: true
